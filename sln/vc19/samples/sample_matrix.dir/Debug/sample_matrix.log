@@ -1,0 +1,3 @@
+﻿  sample_matrix.cpp
+C:\Users\днс\Desktop\mp2-lab2-matrix\include\utmatrix.h(64,48): warning C5037:  "TVector<ValType>::TVector": внешнее определение члена шаблона класса не может иметь аргументы по умолчанию
+  sample_matrix.vcxproj -> C:\Users\днс\Desktop\mp2-lab2-matrix\sln\vc19\bin\sample_matrix.exe

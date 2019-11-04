@@ -1,0 +1,6 @@
+C:/Users/днс/Desktop/mp2-lab2-matrix/sln/vc19/CMakeFiles/ALL_BUILD.dir
+C:/Users/днс/Desktop/mp2-lab2-matrix/sln/vc19/CMakeFiles/ZERO_CHECK.dir
+C:/Users/днс/Desktop/mp2-lab2-matrix/sln/vc19/include/CMakeFiles/matrix.dir
+C:/Users/днс/Desktop/mp2-lab2-matrix/sln/vc19/samples/CMakeFiles/sample_matrix.dir
+C:/Users/днс/Desktop/mp2-lab2-matrix/sln/vc19/gtest/CMakeFiles/gtest.dir
+C:/Users/днс/Desktop/mp2-lab2-matrix/sln/vc19/test/CMakeFiles/test_matrix.dir
