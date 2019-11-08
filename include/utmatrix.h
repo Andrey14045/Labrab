@@ -9,6 +9,7 @@
 #define __TMATRIX_H__
 
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
@@ -63,13 +64,15 @@ public:
 template <class ValType>
 TVector<ValType>::TVector(int s = 10, int si = 0)
 {
-	if ((s <= 0) || (s >= MAX_VECTOR_SIZE) || (si < 0))
+	if ((s < 0) || (s >= MAX_VECTOR_SIZE) || (si < 0))
 		throw "Incorrect data";
 	else
 	{
 		Size = s;
 		StartIndex = si;
 		pVector = new ValType[Size];
+		for (int i = 0; i < Size; i++)
+			pVector[i] = (ValType) 0;
 	}
 }
 /*-------------------------------------------------------------------------*/
@@ -183,10 +186,11 @@ TVector<ValType> TVector<ValType>::operator*(const ValType& val)
 template <class ValType> // сложение
 TVector<ValType> TVector<ValType>::operator+(const TVector<ValType>& v)
 {
-	if (Size != v.Size)
+	if ((Size != v.Size) || (StartIndex != v.StartIndex))
 		throw "Error";
 	else
 	{
+		int m = min(StartIndex, v.StartIndex);
 		TVector<ValType> tmp(Size, StartIndex);
 		for (int i = 0; i < Size; i++)
 			tmp.pVector[i] = pVector[i] + v.pVector[i];
@@ -199,7 +203,7 @@ template <class ValType> // вычитание
 TVector<ValType> TVector<ValType>::operator-(const TVector<ValType>& v)
 {
 
-	if (Size != v.Size)
+	if ((Size != v.Size) || (StartIndex != v.StartIndex))
 		throw "Error";
 	else
 	{
@@ -214,7 +218,7 @@ TVector<ValType> TVector<ValType>::operator-(const TVector<ValType>& v)
 template <class ValType> // скалярное произведение
 ValType TVector<ValType>::operator*(const TVector<ValType>& v)
 {
-	if (Size != v.Size)
+	if ((Size != v.Size) || (StartIndex != v.StartIndex))
 		throw "Error";
 	else
 	{
